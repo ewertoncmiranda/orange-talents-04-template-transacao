@@ -15,6 +15,14 @@ public class TransacaoResponse {
 
     public TransacaoResponse(){};
 
+    public TransacaoResponse(Transacao transacao){
+        this.efetivadaEm = transacao.getEfetivadaEm();
+        this.valor = transacao.getValor();
+        this.estabelecimento = new EstabelecimentoResponse(transacao.getEstabelecimento());
+        this.cartao = new CartaoResponse(transacao.getCartao());
+        this.id = transacao.getIdTransacao();
+    }
+
     private String id;
     private BigDecimal valor;
     private String efetivadaEm;

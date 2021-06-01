@@ -61,4 +61,11 @@ public class Transacao {
         return efetivadaEm;
     }
 
+    public Cartao getCartao() {
+        return cartao;
+    }
+
+    public Estabelecimento getEstabelecimento() {
+        return estabelecimento;
+    }
 }

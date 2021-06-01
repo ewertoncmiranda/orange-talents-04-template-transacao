@@ -8,6 +8,11 @@ public class CartaoResponse {
 
     private String email ;
 
+    public CartaoResponse(Cartao cartao) {
+        this.id = cartao.getNumeroDoCartao();
+        this.email = cartao.getEmail();
+    }
+
     public String getId() {
         return id;
     }
